@@ -1,0 +1,151 @@
+h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.slick-slide {
+    margin: 0 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 110px;
+
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #EDF2FB;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.copy {
+    padding-top: 250px;
+}
+
+@media (max-width: 767px) {
+    .slick-slide img {
+        width: 78px;
+        height: 81px;
+    }
+
+
+}
+
+/* ########################################################################################### */
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.carousel-frame {
+    position: relative;
+    width: 100%;
+    height: min(calc(90vh - 10px), 62vh);
+    margin: auto;
+    overflow: hidden;
+    box-shadow: inset 60px 0px 60px -60px rgb(0, 0, 0),
+        inset -60px 0px 60px -60px rgb(0, 0, 0);
+    background-image: radial-gradient(circle,
+            transparent,
+            transparent 75%,
+            rgba(0, 0, 0, 0.3));
+    background-color: #EDF2FB;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    justify-content: start;
+    height: 40vh;
+    mix-blend-mode: multiply;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    object-fit: cover;
+    height: 62vh;
+
+}
+
+.carousel-prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -15px;
+    z-index: 10;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -15px;
+    z-index: 10;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.carousel-dots {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: 0 auto;
+    width: max(100px, 15%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-dots li {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-dots .active-dot {
+    background-color: rgba(255, 255, 255, 0.8);
+}

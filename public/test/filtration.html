@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSL</title>
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/nav-footer-test.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- for google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&family=Oswald:wght@200;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+
+
+    <script src="https://kit.fontawesome.com/3d8edf6a83.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container-9">
+            <div class="logo">
+                <a href="/"> <i class="fa-solid fa-flask" style="color: #2c446d; width: 50px;"></i>NATIONAL SPECIALIZED
+                    LABORATORIES</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#Our-Services">Our Services</a></li>
+                    <li><a href="/#about">About us</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section>
+        <div class='container'>
+            <div class="container_content">
+                <div class="container_content_inner">
+                    <div class="title">
+                        <h1 class="h1">Oil Filtration</h1>
+                    </div>
+                    <div class="par">
+                        <p class="p">
+                            Cupiditate alias odio omnis minima veritatis saepe porro, repellendus natus vitae, sequi
+                            exercitationem ipsam, qui possimus sit eveniet laborum sapiente quisquam quae neque velit?
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container_outer_img">
+                <div class="img-inner">
+                    <img src='../image/wallpaperflare.com_wallpaper (1).jpg' alt="" class="container_img" />
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+
+
+    <footer>
+        <footer class="footer-distributed">
+
+            <div class="footer-left 0NE ">
+
+                <h3><span> <img src="../image/nsl logo/nsl.png" id="nsl-logo"></span>NSL</h3>
+
+                <p class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/#Our-Services">Our Serves</a>
+                    <a href="/#about">About Us </a>
+
+                </p>
+
+                <p class="footer-company-name">National specialized laboratories © 2023</p>
+            </div>
+
+
+
+        </footer>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+    </script>
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+
+</html>

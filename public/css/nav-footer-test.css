@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+
+
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+/* .container-9 {
+    width: 100%;
+    margin: 0 70px;
+} */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 1;
+    /* background-color: #C9CAD9; */
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 29px;
+}
+
+.nav div.logo a:hover {
+    color: #A3BCF9;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+    margin-right: 100px;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 25px;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #A3BCF9;
+}
+
+
+/* Home section */
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) {
+    .navTrigger {
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #C9CAD9;
+}
+
+
+
+
+
+
+.myH2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.myP {
+    text-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 20px;
+}
+
+
+
+
+/* ****************************************************************** */
+
+
+/* for footer */
+.footer-1 {
+    display: flex;
+    justify-content: center;
+}
+
+#nsl-logo {
+    height: 70px;
+    width: 90px;
+    margin-top: 7px;
+}
+
+.footer-distributed {
+
+    align-items: center;
+    background: #CCDBFD;
+    box-shadow: 0 1px 1px 0 #ABC4FF;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    font: bold 16px 'Playfair Display';
+    padding: 50px 150px 40px 150px;
+    height: 220px;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+
+}
+
+.footer-distributed h3 span {
+    color: #A3B18A;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 6px 0 27px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    font-size: 23px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.footer-distributed .footer-company-name {
+    color: #1b1616;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+
+
+    font-size: 30px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #38405c;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #344e41;
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .footer-distributed {
+        padding: 50px 68px 40px 67px;
+    }
+
+    .nav div.logo a {
+
+        font-size: 17px;
+    }
+
+    .nav div.main_list ul li a {
+
+        font-size: 18px;
+    }
+
+    .nav div.main_list {
+
+        margin-right: 0;
+    }
+
+
+    .footer-distributed {
+        height: 234px;
+        margin: 0;
+        padding: 30px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .nav div.logo {
+        margin-left: -50px;
+    }
+
+    .nav div.main_list ul li a {
+        text-decoration: none;
+        color: #fff;
+        line-height: 65px;
+        font-size: 21px;
+    }
+
+    .nav {
+        padding-left: 0;
+    }
+
+    .navTrigger {
+        display: block;
+    }
+
+    .nav div.logo {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .nav div.logo a {
+        font-size: 15px;
+    }
+
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 73%;
+        height: 27vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #C9CAD9;
+        /*same background color of navbar*/
+        background-position: center top;
+        margin: 50px 58px 38px 110px;
+        border-radius: 58px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+
+    .nav div.media_button {
+        display: block;
+    }
+
+
+    .nav div.main_list {
+        margin-right: 0;
+    }
+
+    .nav div.main_list ul li {
+
+        padding-right: 19px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .footer-distributed {
+        height: 234px;
+        margin: 0;
+        padding: 30px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-distributed .footer-left {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+
+
+    .container_outer_img {
+        width: 295px;
+        height: 260PX;
+    }
+
+    .img-inner {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+    }
+
+    .container_img {
+        width: 100%;
+
+        height: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .container-9 {
+        width: 100vw;
+        margin: 0;
+    }
+
+
+
+    section {
+        width: 100vw;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .h1 {
+        font-size: 47px;
+    }
+
+    .p {
+        font-size: 18px;
+    }
+
+    .container_content {
+        width: 100%;
+        margin-top: 38px;
+    }
+
+
+    .container_content_inner {
+
+        margin-left: 46px;
+    }
+
+    .img-inner {
+        height: 100%;
+    }
+
+    .container_img {
+        height: 100%;
+    }
+
+    .container_outer_img {
+        margin: 18px;
+        width: 60%;
+        overflow: hidden;
+        border-radius: 15px;
+        height: 277px;
+    }
+
+    .div-1 {
+        flex-wrap: wrap;
+    }
+
+    .div-p {
+        width: 95%;
+    }
+
+    .div-p h1 {
+        font-size: 29px;
+    }
+
+    .div-img {
+        width: 96%;
+    }
+
+    #nsl-logo {
+        height: 47px;
+        width: 58px;
+        margin-top: 7px;
+    }
+
+    .footer-distributed {
+        /* padding-bottom: 176px; */
+        height: 181px;
+        display: flex;
+        align-items: baseline;
+        /* text-align: center; */
+    }
+
+    .footer-distributed .footer-left {
+        display: block;
+        width: 100%;
+    }
+
+    .footer-distributed .footer-left {
+        height: 50%;
+    }
+
+    .footer-distributed .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-distributed h3 {
+        font-size: 27px;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .footer-distributed .footer-company-name {
+        font-size: 11px;
+    }
+
+
+}
