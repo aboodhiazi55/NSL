@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="row">
+        <h1 class="text-center">New client </h1>
+        <div class="col-6 offset-3">
+            <form action="/allClient" method="post" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Client name</label>
+                    <input class="form-control" type="text" id="title" name="allClient[title]" required>
+                    <div class="invalid-feedback">
+                        Please choose a Name of client .
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">location</label>
+                    <input class="form-control" type="text" id="location" name="allClient[location]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Img</label>
+                    <input class="form-control" type="text" id="image" name="allClient[image]">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-dark">Add New Client</button>
+                </div>
+            </form>
+        </div>
+    </div>

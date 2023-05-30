@@ -1,0 +1,64 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="card mb-5">
+        <h2 class="card-header">
+            <%= client.title %>
+        </h2>
+        <div class="card-body">
+
+            <p class="card-text">
+                <%= client.location %>
+            </p>
+
+
+            <a class="btn  btn-dark  mb-3" href="/allClient" role="button">All
+                clients</a>
+            <a class="btn  btn-outline-success  mb-3" href="/allClient/<%= client._id %>/edit" role="button">Edit</a>
+        </div>
+    </div>
+
+    <a class="btn  btn-outline-success  mb-3" href="/allClient/<%= client._id %>/addjob" role="button">Add New Job</a>
+
+
+    <% for(let clientTests of client.clientTest) {%>
+        <div class="card mb-3">
+            <h5 class="card-header">
+                <%=clientTests.sampleDate %>
+            </h5>
+            <div class="card-body">
+
+                <p class="card-text">Job Number : <%= clientTests.jobNumber %>
+                </p>
+                <p class="card-text"> NSL Number : <%= clientTests.nslNumber %>
+                </p>
+                <p class="card-text">Total Number Of Sample : <%= clientTests.totalNumberOfSample %>
+                </p>
+                <p class="card-text">Type Of Sample : <%= clientTests.typeOfSample %>
+                </p>
+                <p class="card-text">Recipient : <%= clientTests.recipipent %>
+                </p>
+                <p class="card-text">Resiponsibility : <%= clientTests.resiponsibili %>
+                </p>
+                <p class="card-text">Test Type : <%= clientTests.testType %>
+                </p>
+
+                <a href="/allClient/clientTest/<%=clientTests._id  %>/tests" class="btn btn-success">Show this job </a>
+                <a href="/allClient/<%= client._id %>/editJob/<%=clientTests._id  %>" class="btn btn-danger">Edit</a>
+                <a href="/allClient/clientTest/<%=clientTests._id  %>/tests" class="btn btn-danger">Edit</a>
+
+
+            </div>
+        </div>
+
+        <% }%>
+
+
+
+
+
+
+
+            <!-- <form action="/allClient/<%=client._id  %>?_method=DELETE" method="POST">
+        <button type="button" class="btn btn-danger my-5">Delete the client</button>
+    </form> -->

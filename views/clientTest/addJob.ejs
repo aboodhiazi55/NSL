@@ -1,0 +1,77 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <div class="card mb-3">
+        <div class="card-header">
+            Add New job
+        </div>
+        <div class="card-body">
+
+            <form class="row g-3 validated-form" method="POST" action="/allClient/<%= client._id %>/Jobs" novalidate>
+
+                <div class="col-md-2">
+                    <label for="validationDefault01" class="form-label">Job Number</label>
+                    <input name="clientTest[jobNumber]" type="text" class="form-control" id="validationDefault01"
+                        value="" placeholder="#" required>
+                    <div class="invalid-feedback">
+                        Please choose a Job Number.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="validationDefault02" class="form-label">NSL Number</label>
+                    <input name="clientTest[nslNumber]" type="text" class="form-control" id="validationDefault02"
+                        value="" placeholder="#" required>
+                    <div class="invalid-feedback">
+                        Please choose a NSL Number.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault03" class="form-label">Samples Date</label>
+                    <input name="clientTest[sampleDate]" type="date" class="form-control" id="validationDefault03"
+                        value="" required>
+                    <div class="invalid-feedback">
+                        Please choose a Samples Date.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationDefault04" class="form-label">Total Number Of Sample</label>
+                    <input name="clientTest[totalNumberOfSample]" type="text" class="form-control"
+                        id="validationDefault04" value="" required>
+                    <div class="invalid-feedback">
+                        Please choose a Total Number Of Sample.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationDefault05" class="form-label">Type Of Oil</label>
+                    <input name="clientTest[typeOfSample]" type="text" class="form-control" id="validationDefault05"
+                        value="" required>
+                    <div class="invalid-feedback">
+                        Please choose a Type Of Oil.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationDefault06" class="form-label">Recipient</label>
+                    <input name="clientTest[recipipent]" type="text" class="form-control" id="validationDefault06"
+                        value="">
+                </div>
+                <div class="col-md-6">
+                    <label for="validationDefault07" class="form-label">Responsibility</label>
+                    <input name="clientTest[resiponsibili]" type="text" class="form-control" id="validationDefault07"
+                        value="" placeholder="Eng:">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="validationDefault08" class="form-label">Test Type</label>
+                    <input name="clientTest[testType]" type="text" class="form-control" id="validationDefault08"
+                        required>
+                    <div class="invalid-feedback">
+                        Please choose a Test Type.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+    </div>

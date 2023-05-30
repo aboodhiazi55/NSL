@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate') %>
+    <img src=".../public/image/" alt="">
+
+    <a class="btn  btn-dark btn-lg mb-3" href="/allClient/newClient" role="button">Add New
+        Client</a>
+
+
+    <% for(let clinet of allClient) {%>
+
+        <div class="card mb-3" style="max-width:auto;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src=" <%= clinet.image %>" class="img-fluid " alt="...">
+
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title">
+
+                            <%= clinet.title %>
+
+                        </h4>
+                        <p class="card-text">
+                            <%= clinet.location %>
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </p>
+                        <a href="/allClient/<%=clinet._id %>" class="btn btn-primary">Show <%= clinet.title %></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%}%>
